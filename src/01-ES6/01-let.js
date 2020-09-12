@@ -32,3 +32,25 @@
 
 // if (true) let a = 5  // Lexical declaration cannot appear in a single-statement context 
 // if(true) {let a = 5} √
+
+// for (var i = 0; i < 3; i++) {
+//   setTimeout(function() {
+//     console.log(i) // 3 3 3
+//   })
+// }
+
+// 使用闭包的形式
+// for (var i = 0; i < 3; i++) {
+//   (function(j) {
+//     setTimeout(function() {
+//       console.log(j) // 0 1 2
+//     })
+//   })(i)
+// }
+
+// 使用let的形式
+for(let i = 0; i < 3; i++) {
+  setTimeout(function() {
+    console.log(i) // 0 1 2
+  })
+}
