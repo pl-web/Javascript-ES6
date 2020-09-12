@@ -24,3 +24,8 @@ function foo () {
 }
 let [a = foo()] = [1]
 let [b = foo()] = []
+
+// json
+let json_data = '{"x": "hello", "y": "world"}'
+let json_arr = JSON.parse(json_data)
+console.log(json_arr)
