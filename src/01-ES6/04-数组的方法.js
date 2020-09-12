@@ -1,4 +1,4 @@
-let arr = [1, 2, 3, 4, 5]
+let arr = [1, 1, 2, 2, 3, 4, 5, 6, 6]
 
 
 // forEach
@@ -45,3 +45,19 @@ let res_reduce = arr.reduce(function(prev, curr, index, arr_) {
   return prev + curr
 }, 0)
 console.log("reduce: ", res_reduce)
+
+
+// reduce ： 求出数组中的最大值
+let res_reduce_max = arr.reduce(function(prev, curr) {
+  return Math.max(prev, curr)
+}, 0)
+console.log(res_reduce_max) // 5
+
+
+// reduce : 数组的去重
+// second params : 设置为 one empty array
+let res_reduce_set = arr.reduce(function(prev, curr) {
+  prev.indexOf(curr) == -1 && prev.push(curr)
+  return prev
+}, [])
+console.log(res_reduce_set)
