@@ -80,3 +80,10 @@ let arr_new = [1, 2, 3, 4, 6, 5, 1, 3, 2, 6]
 for(let [index, item] of arr_new.entries()) {
   console.log([index, item])
 }
+
+
+// Array
+// 类数组、伪数组
+let div_collection = document.getElementsByTagName('div')
+console.log(div_collection) // HTMLCollection
+console.log(div_collection instanceof Array) // false
