@@ -12,5 +12,15 @@
 // let [a, b, [c, d]] = [1, 2, [3, 4]]
 // console.log(a, b, c, d) // 1, 2, 3, 4
 
-let [a, b, c] = [1, 2, [3, 4]]
-console.log(a, b, c)
+// let [a, b, c] = [1, 2, [3, 4]]
+// console.log(a, b, c)
+
+// 字符串也可以进行数组一样地解构
+let [xx, yy, xy, yx, xxy, yxx] = "abcdef"
+console.log(xx, yy, xy, yx, xxy, yxx)
+
+function foo () {
+  console.log(111)
+}
+let [a = foo()] = [1]
+let [b = foo()] = []
