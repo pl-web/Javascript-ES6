@@ -22,3 +22,13 @@
 
 // console.log("f", f) // Cannot access 'f' before initialization
 // let f = 11
+
+// let { ... }
+// if(true) {
+//   let a
+//   a = 5
+//   console.log("a: ", a)
+// }
+
+// if (true) let a = 5  // Lexical declaration cannot appear in a single-statement context 
+// if(true) {let a = 5} √
