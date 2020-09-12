@@ -21,3 +21,17 @@ let res = arr.filter(function(value) {
   return value >= 2
 })
 console.log(res)
+
+
+// some
+let res_some = arr.some(function(value) {
+  return value == 2
+})
+console.log("some: ", res_some)  // true
+
+
+// every
+let res_every = arr.every(function(value) {
+  return value == 2
+})
+console.log("every: ", res_every)  // false
