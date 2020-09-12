@@ -87,3 +87,25 @@ for(let [index, item] of arr_new.entries()) {
 let div_collection = document.getElementsByTagName('div')
 console.log(div_collection) // HTMLCollection
 console.log(div_collection instanceof Array) // false
+
+// splice
+let arr_collection = Array.prototype.slice.call(div_collection)
+console.log(arr_collection) // 此时得到的内容就是一个数组了
+
+// arguments
+function fun() {
+  console.log(arguments) // 伪数组
+}
+fun(1, 2, 3)
+
+// arrayLike
+let arrayLike = {
+  0: "es6",
+  1: "es7",
+  2: "es8",
+  3: "es9",
+  length: 4
+}
+// Array.from()
+let array_like = Array.from(arrayLike)
+console.log(array_like) // 此时array_like就是一个真正的数组了
