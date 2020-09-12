@@ -1,6 +1,5 @@
 let arr = [1, 1, 2, 2, 3, 4, 5, 6, 6]
 
-
 // forEach
 // forEach not support break and continue
 // arr.forEach(function(item, index, _arr) {
@@ -63,7 +62,6 @@ let res_reduce_set = arr.reduce(function(prev, curr) {
 console.log(res_reduce_set)
 
 
-
 // ES6
 let arr_new = [1, 2, 3, 4, 6, 5, 1, 3, 2, 6]
 
@@ -109,3 +107,8 @@ let arrayLike = {
 // Array.from()
 let array_like = Array.from(arrayLike)
 console.log(array_like) // 此时array_like就是一个真正的数组了
+
+// Array.of()
+let arr_new_ = new Array
+arr_new_ = Array.of(2)
+console.log(arr_new_) // 初始值为 [2]
