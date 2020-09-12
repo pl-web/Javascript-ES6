@@ -61,3 +61,22 @@ let res_reduce_set = arr.reduce(function(prev, curr) {
   return prev
 }, [])
 console.log(res_reduce_set)
+
+
+
+// ES6
+let arr_new = [1, 2, 3, 4, 6, 5, 1, 3, 2, 6]
+
+
+// find findIndex
+
+
+// for of 
+// for(let [index,item] of arr_new) {
+//   console.log(index, item)
+// }  ×
+
+// arr.keys()  arr.values()  arr.entries() 
+for(let [index, item] of arr_new.entries()) {
+  console.log([index, item])
+}
