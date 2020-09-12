@@ -112,3 +112,13 @@ console.log(array_like) // 此时array_like就是一个真正的数组了
 let arr_new_ = new Array
 arr_new_ = Array.of(2)
 console.log(arr_new_) // 初始值为 [2]
+
+// copyWithin()
+
+// fill()
+let arr_fill = new Array(3).fill(2)
+console.log(arr_fill) // [2,2,2]
+
+// indexOf(...) // 不能检测是否有NaN
+// includes(...) // 可以检测到是否有NaN
+console.log(NaN === NaN) // false
