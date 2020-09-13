@@ -23,3 +23,21 @@ let _obj = {
   }
 }
 _obj.study()
+
+
+// Object.is()
+// Object.assign()
+let x = {
+  a: 1,
+  b: 2
+}
+let y = {...x}
+console.log(y)
+
+// in
+let arr = [1, 2, 3]
+console.log(3 in arr) // false
+let obj_a = {
+  a: 1
+}
+console.log("a" in obj_a) // true
