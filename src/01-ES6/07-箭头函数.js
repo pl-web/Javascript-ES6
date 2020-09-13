@@ -10,3 +10,5 @@ let add = function (x, y) {
 // }
 let sum = (x, y) => x + y
 console.log(sum(1, 2))
+
+// () => {}
