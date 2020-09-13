@@ -25,3 +25,33 @@ const stus = {
   李四: { grade: 2, number: 002 },
   张三: { grade: 3, number: 003 }
 }
+
+const stu1 = Symbol("张三")
+const stu3 = Symbol("张三")
+
+const stus_ = {
+  [stu1]: { grade: 1, number: 001 },
+  [stu3]: { grade: 2, number: 003 }
+}
+
+// 消除魔术字符串
+// let curr_shape = {
+//   triangle: 'Triangle',
+//   square: 'Square'
+// }
+let curr_shape = {
+  triangle: Symbol(),
+  square: Symbol()
+}
+function getArea(shape) {
+  let area = 0
+  switch (shape) {
+    case curr_shape.triangle:
+      area = 12
+      break
+    case curr_shape.square:
+      area = 16
+      break
+  }
+  return area
+}
