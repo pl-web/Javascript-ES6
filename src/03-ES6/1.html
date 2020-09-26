@@ -9,6 +9,11 @@
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/babel-core/4.0.1/browser.js"></script>
   <script type="text/babel">
+    class Test extends React.Component{
+      constructor(...args) {
+        super(...args);
+      }
+    }
     window.onload = function () {
       let ctx = document.getElementById("app");
       ReactDOM.render(
