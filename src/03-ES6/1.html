@@ -13,11 +13,17 @@
       constructor(...args) {
         super(...args);
       }
+      // No `render` method found on the returned component instance: you may have forgotten to define `render`.
+      render() {
+        //  Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+        return <h1>React</h1>
+      }
     }
     window.onload = function () {
       let ctx = document.getElementById("app");
       ReactDOM.render(
-        <span>123.React</span>,
+        // <span>123.React</span>,
+        <Test></Test>,
         ctx
       )
     }
