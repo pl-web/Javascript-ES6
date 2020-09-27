@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Promise -->
+  <!-- 消除异步操作 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.js"></script>
+  <script>
+    let p_async = new Promise(function(resolve, reject) {
+      // 异步的代码
+      // resolve success
+      // reject error
+      $.ajax({
+        url: '4-promise.txt',
+        dataType: 'json',
+        success(data_) {
+          resolve(data_)
+        },
+        error(err) {
+          reject(err)
+        }
+      })
+    })
+    p_async.then(
+      function(data_) {
+        alert("Success!")
+        alert(data_)
+      }
+    ).catch(
+      function(err) {
+        alert("Error!")
+      }
+    )
+  </script>
+</body>
+</html>
