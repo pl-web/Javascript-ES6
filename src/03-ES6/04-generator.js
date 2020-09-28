@@ -15,18 +15,31 @@
 
 // yield
 // 可以传参，也可以返回数据
+// const fuu = function* () {
+//   alert('step 1')
+
+//   let params = yield
+
+//   alert('step 2')
+
+//   alert("params: ", params)
+
+// }
+
+// let gen = fuu()
+
+// gen.next(1)
+// gen.next(2)
+
+
 const fuu = function* () {
-  alert('step 1')
-
-  let params = yield
-
-  alert('step 2')
-
-  alert("params: ", params)
-
+  alert('step 1');
+  yield 12;
+  alert('step 2');
+  return 123;
 }
-
-let gen = fuu()
-
-gen.next(1)
-gen.next(2)
+let gen = fuu();
+let res_1 = gen.next()
+console.log(res_1);
+let res_2 = gen.next();
+console.log(res_2);
