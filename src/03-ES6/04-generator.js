@@ -1,11 +1,32 @@
-const foo = function* () {
+// const foo = function* () {
+//   alert('step 1')
+//   yield
+//   alert('step 2')
+// }
+
+// let geneObj = foo()
+
+// 调用next()函数
+// 每调用一次，就向下执行一步
+// geneObj.next()
+// geneObj.next()
+
+// generator的使用
+
+// yield
+// 可以传参，也可以返回数据
+const fuu = function* () {
   alert('step 1')
-  yield
+
+  let params = yield
+
   alert('step 2')
+
+  alert("params: ", params)
+
 }
 
-let geneObj = foo()
+let gen = fuu()
 
-geneObj.next()
-geneObj.next()
-
+gen.next(1)
+gen.next(2)
